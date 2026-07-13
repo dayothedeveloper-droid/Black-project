@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+*::after,::before{
+    box-sizing: border-box
+}
+@layer utility{
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+    /* typography */
+    :root{
+        --font-size-htags: calc(24 / 16 * 1rem);
+        --fs-ptags: calc(15 / 16 * 1rem);
+        --ff-ptags: font-family: 'Nunito Sans';
+    }
+    /* layout */
+    :root{
+        --display: flex;
+        --gap-space: calc(5 / 16 * 1rem);
+        --gap-space-extra: calc(20 / 16 * 1rem);
+        --direction: column;
+    }
+
+}
+
+.header-main{
+    display: flex;
+    align-items: center;
+    padding: calc(15 / 16 * 1rem) calc(30 / 16 * 1rem);
+    justify-content: space-between;
+}
+.header-img-container{
+
+}
+.header-img{
+    height: 100%;      
+    max-height: 40px;  
+    width: auto;      
+    object-fit: contain;
+}
+.header-list-container{
+
+}
+.header-list{
+    display: flex;
+    gap: var(--gap-space-extra);
+    list-style: none;
+}
+a{
+    font-style: none;
+    font-family: var(--ff-ptags)
+}
