@@ -7,13 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+   <script type="module" src="scripts/display.js"></script>
     <title>BLACK</title>
 </head>
 <body style="background-color: black;">
     <!-- Header section -->
     <header class="header-main">
-
-        <section class="right-section-header">
+        <!-- Mobile markup header -->
+        <section class="left-section-header">
             <button class="hamburger-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 512 512">
                 <path d="M0 0h512v512H0z" fill="none" />
@@ -24,12 +25,12 @@
 
         <section class="middle-section-header">
             <div class="img-container">
-                  <img class="header-img" src="Images/BLAKC_7.png" alt="Black-logo"> </section>
+                  <img class="header-img-mobile" src="Images/BLAKC_7.png" alt="Black-logo"> </section>
             </div>
         </section>
 
 
-        <section class="left-section-header">
+        <section class="right-section-header">
         <button class="cart-icon-svg">
            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none" />
@@ -38,12 +39,12 @@
       </button>
       </section>
 
-        <section class="right-section-header header-img-container">
+      <!-- Desktop header -->
+        <section class=" header-img-container">
             
             <img class="header-img" src="Images/BLAKC_7.png" alt="Black-logo"> </section>
 
-        <section class="middle-section    
-            header-list-container"> 
+        <section class="header-list-container"> 
             <ul class="header-list">
                 <li class="list-content-header"><a href="">Home</a></li>
                 <li class="list-content-header"><a href="">Men</a></li>
@@ -72,6 +73,19 @@
 </section>
  </header>
 
-
+    <!-- sidebar -->
+    <div class="overlay">
+        <aside class="sidebar">
+            <ul class="header-list">
+                <li class="list-content-header"><a href="">Home</a></li>
+                <li class="list-content-header"><a href="">Men</a></li>
+                <li class="list-content-header"><a href="">Women</a></li>
+                <li class="list-content-header" ><a href="">Watch</a></li>
+                <li class="list-content-header"><a href="">Wallet</a></li>
+                <li class="list-content-header"><a href="">iPhone Case</a></li>
+                <li class="list-content-header"><a href="">Exchange & Returns</a></li>
+            </ul>
+        </aside>
+    </div>
 </body>
 </html>

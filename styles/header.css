@@ -18,38 +18,24 @@
     }
     /* layout */
     :root{
-        --display: flex;
+        --display-flex: flex;
         --gap-space: calc(5 / 16 * 1rem);
         --gap-space-pro: calc(20 / 16 * 1rem);
-        --gap-space-pro-max: calc(65 / 16 * 1rem);
+        --gap-space-pro-max: calc(150 / 16 * 1rem);
         --direction: column;
     }
 
 }
 
 .header-main{
-    display: var(--display);
-    justify-content: space-between;
+    display: var(--display-flex);
     align-items: center;
     padding: calc(20 / 16 * 1rem) calc(40 / 16 * 1rem);
-    gap: var(--gap-space-pro-max);
     background-color: hsl(39, 77%, 83%);
 }
-@media (width < calc(915 / 16 * 1rem)) {
-   .header-main{
-    display: flex;
-   
-    row-gap: var(--gap-space-pro-max);
-   }
-   .header-img-container{
 
-   }
-   .header-list-container{
-    display: none;
-   }
-}
 .header-img-container{
-
+    flex: 1;
 }
 .header-img{
     height: 100%;      
@@ -58,10 +44,11 @@
     object-fit: contain;
 }
 .header-list-container{
-
+     flex: 2;
 }
 .header-list{
-    display: var(--display);
+    display: var(--display-flex);
+    justify-content: center;
     gap: var(--gap-space-pro);
     list-style: none;
 }
@@ -77,11 +64,47 @@
 }
 .header-svg-container{
     display: flex;
+    flex: 1;
     gap: var(--gap-space-pro);
     align-items: center;
+    justify-content: flex-end;
 }
 .search-icon-svg,
-.cart-icon-svg{
+.cart-icon-svg,
+.hamburger-menu{
     background-color: hsl(39, 77%, 83%);
     border: none;
+    cursor: pointer;
+}
+@media (width > calc(915 / 16 * 1rem)) {
+   .right-section-header{
+    display: none;
+   }
+   .middle-section-header{
+    display: none;
+   }
+   .left-section-header{
+    display: none;
+   }
+}
+@media (width < calc(915 / 16 * 1rem)) {
+   .header-list-container{
+    display: none;
+}
+    .header-img-container{
+        display: none;
+    }
+    .header-svg-container{
+        display: none;
+    }
+   .header-main{
+    display: flex;
+    justify-content: space-between;
+   }
+    .header-img-mobile{
+        height: 100%;      
+        max-height: 40px;  
+        width: auto;      
+        object-fit: contain;
+    }
 }
