@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/sidebar/sidebar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-   <script type="module" src="scripts/display.js"></script>
+    <script type="module" src="scripts/BlackScriptsMain.js"></script>
     <title>BLACK</title>
 </head>
 <body style="background-color: black;">
@@ -76,16 +77,26 @@
     <!-- sidebar -->
     <div class="overlay">
         <aside class="sidebar">
-            <ul class="header-list">
-                <li class="list-content-header"><a href="">Home</a></li>
-                <li class="list-content-header"><a href="">Men</a></li>
-                <li class="list-content-header"><a href="">Women</a></li>
-                <li class="list-content-header" ><a href="">Watch</a></li>
-                <li class="list-content-header"><a href="">Wallet</a></li>
-                <li class="list-content-header"><a href="">iPhone Case</a></li>
-                <li class="list-content-header"><a href="">Exchange & Returns</a></li>
+            <button class="close-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 512 512">
+                <path d="M0 0h512v512H0z" fill="none" />
+                <path fill="#000" fill-rule="evenodd" d="M420.48 121.813L390.187 91.52L256 225.92L121.813 91.52L91.52 121.813L225.92 256L91.52 390.187l30.293 30.293L256 286.08l134.187 134.4l30.293-30.293L286.08 256z" />
+                </svg>
+            </button>
+            <ul class="sidebar-links">
+                <li class="list-content-sidebar"><a href="">Home</a></li>
+                <li class="list-content-sidebar"><a href="">Men</a></li>
+                <li class="list-content-sidebar"><a href="">Women</a></li>
+                <li class="list-content-sidebar" ><a href="">Watch</a></li>
+                <li class="list-content-sidebar"><a href="">Wallet</a></li>
+                <li class="list-content-sidebar"><a href="">iPhone Case</a></li>
+                <li class="list-content-sidebar"><a href="">Exchange & Returns</a></li>
             </ul>
         </aside>
     </div>
+
+    <!-- main content -->
+
+    
 </body>
 </html>
