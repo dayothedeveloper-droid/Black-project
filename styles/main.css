@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    color:  hsl(39, 77%, 83%);;
+    color:  black;
 }
 .hero-content{
     display: flex;
@@ -38,10 +38,10 @@
 .hero-btn{
     padding: calc(12 /16 * 1rem) calc(60 / 16 * 1rem);
     background: none;
-    border-color: hsl(39, 77%, 83%);
+    border-color:black;
     border-style: solid;
     border-width: 1px;
-    color: hsl(39, 77%, 83%);
+    color: black;
     transition: all 0.4s ease;
     cursor: pointer;
     text-decoration: none;
@@ -56,7 +56,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: hsl(39, 77%, 83%);
+    background: black;
     transform: scaleX(0);
     transform-origin: center;
     transition: all 0.4s ease;
@@ -66,14 +66,14 @@
     transform: scaleX(1);
 }
 .hero-btn:hover{
-    color: black;
+    color: white;
 }
 
 
 .hero-btn-collection{
     padding: calc(12 /16 * 1rem) calc(60 / 16 * 1rem);
-    background-color: #f5deb2;
-    color: black;
+    background-color: black;
+    color: white;
     font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
     font-size: clamp(0.60rem, calc(13 / 16 * 1rem), 2rem);
     transition: all 0.4s ease;
@@ -81,7 +81,7 @@
     cursor: pointer;
 }
 .hero-btn-collection:hover{
-    background-color: hsl(38, 28%, 60%);
+    opacity: 0.7;
 }
 .hero-link-container{
     display: flex;

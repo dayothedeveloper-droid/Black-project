@@ -4,7 +4,7 @@
     left: 0;
     width: 280px;
     height: 100vh;
-    background: black;
+    background: white;
     transform: translateX(-100%);
     z-index: 1000;
     transition: all 0.4s ease;
@@ -41,7 +41,7 @@
 }
 .list-content-sidebar a{
     text-decoration: none;
-    color: hsl(39, 77%, 83%);
+    color: black;
     font-family:'Nunito sans', Arial;  
     display: block;
     padding: 18px 12px;   

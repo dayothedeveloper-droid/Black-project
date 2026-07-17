@@ -6,13 +6,14 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/sidebar/sidebar.css">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/overlay.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <script type="module" src="scripts/BlackScriptsMain.js"></script>
+    <script defer type="module" src="scripts/BlackScriptsMain.js"></script>
     <title>BLACK</title>
 </head>
-<body style="background-color: black;">
+<body>
     <!-- Header section -->
     <header class="header-main">
         <!-- Mobile markup header -->
@@ -81,8 +82,9 @@
             <button class="close-button">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none" />
-            <path fill="none" stroke="#f5deb2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" />
-          </svg>
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6.758 17.243L12.001 12m5.243-5.243L12 12m0 0L6.758 6.757M12.001 12l5.243 5.243" />
+        </svg>
+
             </button>
             <ul class="sidebar-links">
                 <li class="list-content-sidebar"><a href="">Home</a></li>
@@ -118,7 +120,43 @@
                 </div>
             </div>
         </section>
+        
     </main>
-    <!-- Popup  -->
+    <!-- Popup  container -->
+     
+    <div class="overlay-popup">
+        <div class="popup-contents">
+            <div class="svg-container">
+                <button class="close-popup-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 2048 2048">
+                    <path d="M0 0h2048v2048H0z" fill="none" />
+                    <path fill="currentColor" d="m1115 1024l690 691l-90 90l-691-690l-691 690l-90-90l690-691l-690-691l90-90l691 690l691-690l90 90z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="header-logo-popup">
+                <img class="img-popup" src="Images/BLAKC_7.png" alt="">
+            </div>
+            <div class="header-text-overlay">
+            <h2 class="popup-headertag">Always first.</h2>
+            </div>
+            <div class="paragraph-text-overlay">
+                <p class="popup-ptag">
+                    Exclusive Deals just for you. Subscribe to see the latest and greatest
+                    deals right in your inbox.
+                </p>
+            </div>
+            <div class="input-subscribe-container">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+            <div class="button-subscribe-container">
+                <button class="subscribe-button">
+                    Subscribe
+                </button>
+            </div>
+            </div>
+        </div>
+</div>
 </body>
 </html>
