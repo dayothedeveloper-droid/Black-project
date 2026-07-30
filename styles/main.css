@@ -5,8 +5,8 @@
 }
 
 .hero-section{
-    margin-top: calc(100 /16 * 1rem);
-    margin-bottom: calc(150 / 16 * 1rem);
+    margin-top: calc(150 /16 * 1rem);
+    margin-bottom: calc(250/ 16 * 1rem);
     width:  100%;
     display: flex;
     justify-content: center;

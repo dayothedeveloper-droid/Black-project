@@ -1,7 +1,7 @@
 const overlay = document.querySelector(".overlay-popup");
 const closeBtn = document.querySelector(".close-popup-btn");
 const STORAGE_KEY = "popupDismissed";
-const DEV_MODE =  false;
+const DEV_MODE =  true;
 
 if (DEV_MODE) {
     localStorage.removeItem(STORAGE_KEY);
@@ -18,11 +18,11 @@ export function showPopup () {
     if (!hasDismissedPopup()) {
       setTimeout(() => {
         overlay.classList.add("show");
-    }, 2000);
-    }
+    }, 5000);
+}
    
   closeBtn.addEventListener("click", () => {
     overlay.classList.remove("show");
     saveDismissedPopup();
   });
-};
+}
