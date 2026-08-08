@@ -27,11 +27,12 @@
 
 }
 
+
 .header-main{
     display: var(--display-flex);
     align-items: center;
     padding: calc(20 / 16 * 1rem) calc(40 / 16 * 1rem);
-   header {
+    header {
   position: fixed;
   top: 0;
   left: 0;

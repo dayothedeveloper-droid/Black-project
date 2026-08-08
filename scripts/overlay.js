@@ -1,17 +1,17 @@
 const overlay = document.querySelector(".overlay-popup");
 const closeBtn = document.querySelector(".close-popup-btn");
-const STORAGE_KEY = "popupDismissed";
-const DEV_MODE =  true;
+const storageKey = "popupDismissed";
+const devMode =  false;
 
-if (DEV_MODE) {
-    localStorage.removeItem(STORAGE_KEY);
+if (devMode) {
+    localStorage.removeItem(storageKey);
 };
 const hasDismissedPopup = () => {
-  return localStorage.getItem(STORAGE_KEY);
+  return localStorage.getItem(storageKey);
 };
 
 const saveDismissedPopup = () => {
-  localStorage.setItem(STORAGE_KEY, "true");
+  localStorage.setItem(storageKey, "true");
 };
 
 export function showPopup () {
@@ -19,10 +19,10 @@ export function showPopup () {
       setTimeout(() => {
         overlay.classList.add("show");
     }, 5000);
-}
+};
    
   closeBtn.addEventListener("click", () => {
     overlay.classList.remove("show");
     saveDismissedPopup();
   });
-}
+};
