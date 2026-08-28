@@ -146,17 +146,35 @@
 
 
 /* Shop by collection section */
-
+.shop-by-collection-container{
+    margin-top: calc(20/16*1rem);
+}
 .collection-header{
     text-align: center;
 }
 .content-collection{
     display: flex;
+    gap: calc(40/16*1rem);
+    align-items: center;
+    justify-content: center;
+    margin-top: calc(12/16*1rem);
+    overflow: hidden;
 }
 .collection-img img{
     width: 100%;
-    height: auto;
+    height: calc(400 / 16 * 1rem);
+    object-fit: contain;
+    transition: all 5s ease;
+}
+.content-collection img:hover{
+    transform: scale(1.2);
 }
 @media (width <= 768px) {
-    .
+    .content-collection{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: calc(10/16*1rem);
+        overflow: hidden;
+        margin-top: calc(12/16*1rem);
+    }
 }

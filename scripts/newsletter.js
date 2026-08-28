@@ -5,8 +5,6 @@ const successOverlay = document.getElementById("successModal");
 const closeSuccessBtn = document.querySelector(".close-btn");
 const errorOverlay = document.querySelector("#errorModal");
 const closeErrorOverlay = document.getElementById("closeErrorModalBtn");
-const errorMsg = document.querySelector("#errorModalMessage");
-console.log(errorMsg)
 
 const newsLetter = async () => {
 
@@ -36,12 +34,11 @@ const newsLetter = async () => {
 
 
     } catch (error) {
-        console.log(error)
         overlay.classList.add("hidden")
         errorOverlay.classList.remove("hidden")
         errorMsg.textContent = error.message
     }
-}
+} 
 
 subscribeBtn.addEventListener("click", () => {
     newsLetter();
@@ -53,6 +50,11 @@ closeSuccessBtn.addEventListener("click", () => {
 });
 
 closeErrorOverlay.addEventListener("click", () => {
-  console.log(errorOverlay.children);
   errorOverlay.classList.add("hidden")
+});
+
+emailInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        newsLetter()
+    }
 });

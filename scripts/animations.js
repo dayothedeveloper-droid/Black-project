@@ -7,7 +7,7 @@ const observer = new IntersectionObserver((entries) => {
         };
     });
 }, {
-    threshold: .4
+    threshold: .2
 });
 
 export const initScrollAnimation = () => {
