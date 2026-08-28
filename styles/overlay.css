@@ -23,7 +23,10 @@ p,h2,a{
   opacity: 1;
   visibility: visible;
 }
-
+.overlay-popup.hidden{
+  opacity: 0;
+  display: none !important;
+}
 .popup-contents{
     width: 55%;
     min-height: 60%;
@@ -99,6 +102,11 @@ p,h2,a{
     font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
     font-size: 1rem;
     margin-left: -0.1rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.subscribe-button:hover{
+    opacity: 0.8;
 }
 .svg-container{
     display: flex;
@@ -108,4 +116,175 @@ p,h2,a{
 .close-popup-btn{
     border: none;
     background-color: transparent;
+}
+
+.popup-success{
+    display: flex;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+.hidden {
+  display: none !important;
+}
+.modal-box {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: calc(360 / 16 * 1rem);
+  width: 100%;
+  font-family: inherit;
+  animation: modalPop 0.3s ease-out forwards;
+}
+
+
+@keyframes modalPop {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+  background-color: #f1f3f5;
+  color: #495057;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 16px;
+  transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+  background-color: #e9ecef;
+}
+
+
+.success-animation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.checkmark {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 4;
+  stroke: #22c55e;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #22c55e;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+  stroke: #22c55e;
+  fill: none;
+  animation: stroke .6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke .3s cubic-bezier(0.65, 0, 0.45, 1) .6s forwards;
+}
+
+@keyframes stroke {
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes scale {
+  0%, 100% { transform: none; }
+  50% { transform: scale3d(1.1, 1.1, 1); }
+}
+
+@keyframes fill {
+  100% { box-shadow: inset 0px 0px 0px 32px #22c55e15; }
+}
+/* --- SVG Crossmark Animation Styles --- */
+.error-animation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.crossmark {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 4;
+  stroke: #ef4444; /* Tailwind Red 500 */
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #ef4444;
+  animation: fillError .4s ease-in-out .4s forwards, scaleError .3s ease-in-out .9s both;
+}
+
+.crossmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+  stroke: #ef4444;
+  fill: none;
+  animation: strokeError .6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.crossmark__line {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+}
+
+.crossmark__line.line-1 {
+  animation: strokeError .3s cubic-bezier(0.65, 0, 0.45, 1) .6s forwards;
+}
+
+.crossmark__line.line-2 {
+  animation: strokeError .3s cubic-bezier(0.65, 0, 0.45, 1) .8s forwards;
+}
+
+/* Red Color Button Modifier */
+.error-btn {
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+.error-btn:hover {
+  background-color: #fee2e2;
+}
+
+/* Keyframes matches success behavior with red tinting */
+@keyframes strokeError {
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes scaleError {
+  0%, 100% { transform: none; }
+  50% { transform: scale3d(1.1, 1.1, 1); }
+}
+
+@keyframes fillError {
+  100% { box-shadow: inset 0px 0px 0px 32px #ef444415; }
 }

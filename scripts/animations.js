@@ -1,4 +1,4 @@
-//  use the intersection observer API to initialize scroll animations 
+//  I used the intersection observer API to initialize scroll animations 
 // the intersection obserer API
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -11,7 +11,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 export const initScrollAnimation = () => {
-  const elements =  document.querySelectorAll(".fade-right, .fade-up");
+  const elements =  document.querySelectorAll(".fade-right");
 
   elements.forEach((el) => {
     observer.observe(el);

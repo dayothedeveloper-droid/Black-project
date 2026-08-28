@@ -1,19 +1,17 @@
-const observer = new IntersectionObserver((entries) => {
+const watchObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
-        }
+        };
     });
-}, {
+},{
     threshold: .1
 });
 
-const initWatchAnimation = () => {
-    const elements = document.querySelectorAll(".fade-in");
-
-    elements.forEach((element) => {
-        observer.observe(element);
-    });
+export default function initWatchAnimation() {
+    const watchElement = document.querySelectorAll(".fade-in");
+        watchElement.forEach((el) => {
+            watchObserver.observe(el)
+        });
 };
 
-export default initWatchAnimation;

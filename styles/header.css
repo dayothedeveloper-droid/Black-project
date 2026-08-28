@@ -1,4 +1,4 @@
-*{
+ *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -26,32 +26,26 @@
     }
 
 }
-
-
 .header-main{
     display: var(--display-flex);
     align-items: center;
     padding: calc(20 / 16 * 1rem) calc(40 / 16 * 1rem);
     header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 20px 40px;
-  
-  /* The Magic Elements */
-  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
-  backdrop-filter: blur(12px);           /* Blurs the content behind the header */
-  -webkit-backdrop-filter: blur(12px);   /* Safari support */
-  
-  /* Border & Depth */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25); 
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 40px;
+    /* The Magic Elements */
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent white */
+    backdrop-filter: blur(12px);           /* Blurs the content behind the header */
+    -webkit-backdrop-filter: blur(12px);   /* Safari support */
+    /* Border & Depth */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
-
 }
-
 .header-img-container{
     flex: 1;
 }
