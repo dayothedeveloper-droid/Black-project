@@ -9,6 +9,5 @@ export function showPopup () {
    
   closeBtn.addEventListener("click", () => {
     overlay.classList.remove("show");
-    saveDismissedPopup();
   });
 
