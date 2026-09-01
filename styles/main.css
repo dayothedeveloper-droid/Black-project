@@ -176,3 +176,18 @@
         margin-top: calc(12/16*1rem);
     }
 }
+
+
+/* Wallet section */
+
+.wallet-section{
+    display: flex;
+
+}
+.wallet-contents{
+    display: flex;
+}
+.wallet-img-container img{
+    width: 100%;
+    height: calc(350/16*1rem);
+}
