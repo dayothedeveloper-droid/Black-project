@@ -180,7 +180,26 @@
 
 /* Wallet section */
 .wallet-section{
+    display: flex;
+    align-items: center;
     margin-top: calc(60/16*1rem);
+}
+@media (width <= 768px)  {
+    .wallet-section{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: calc(10/16*1rem);
+        overflow: hidden;
+        margin-top: calc(12/16*1rem);
+    }
+}
+.wallet-img{
+max-width: calc(400 / 16 * 1rem);
+}
+.wallet-img img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 .wallet-content{
     display: flex;
@@ -219,4 +238,38 @@
 }
 .wallet-link:hover{
     color: white;
+}
+.wallet-txt-container{
+    padding: 0.80rem ;
+    display: flex;
+    flex-direction: column;
+    gap: calc(10/16*1rem);
+}
+
+@keyframes gentleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.bounce-active {
+  animation: gentleBounce 1.5s ease-in-out infinite;
+}
+
+/* discount img section */
+
+.image-container-discount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: calc(60/16*1rem);
+}
+.image-container-discount img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
 }

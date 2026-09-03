@@ -3,8 +3,9 @@ import { showPopup } from "./overlay.js";
 import { initScrollAnimation } from "./animations.js";
 import initWatchAnimation from "./watch.js";
 import "../scripts/newsletter.js";
+import bounceAnimation from "./walletImageanimation.js";
 sidebarDisplay();
 showPopup();
 initScrollAnimation();
 initWatchAnimation();
-
+bounceAnimation();
