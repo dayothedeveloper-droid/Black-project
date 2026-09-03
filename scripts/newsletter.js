@@ -5,11 +5,15 @@ const successOverlay = document.getElementById("successModal");
 const closeSuccessBtn = document.querySelector(".close-btn");
 const errorOverlay = document.querySelector("#errorModal");
 const closeErrorOverlay = document.getElementById("closeErrorModalBtn");
+const errorEmailDisplay = document.querySelector(".email-error-display");
+console.log(errorEmailDisplay)
 
 const newsLetter = async () => {
 
     if (emailInput.value.trim() === "") {
         console.log("PLEASE input your email");
+        errorEmailDisplay.computedStyleMap.color = "red"
+        errorEmailDisplay.textContent = "Please input your email";
         return
     }
     subscribeBtn.disabled = true;
@@ -51,10 +55,4 @@ closeSuccessBtn.addEventListener("click", () => {
 
 closeErrorOverlay.addEventListener("click", () => {
   errorOverlay.classList.add("hidden")
-});
-
-emailInput.addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-        newsLetter()
-    }
 });
