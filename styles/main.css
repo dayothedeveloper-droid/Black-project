@@ -2,15 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    animation: none !important;
+    transition: none !important;
 }
 html{
     font-size: 100%;
     scroll-behavior: smooth;
     box-sizing: inherit;
 }
-*{
-    outline: 1px solid red
-}
+
 
 .hero-section{
     margin-top: calc(150 /16 * 1rem);
@@ -130,17 +130,8 @@ html{
     max-width: 100%;
     height: auto;
 }
-.fade-up{
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 
-        all 0.4s ease;
-};
 
-.fade-up.show{
-    opacity: 1;
-    transform: translateY(0)
-}.fade-right{
+.fade-right{
     opacity: 0;
     transform: translateX(40px);
     transition: .7s cubic-bezier(.22, 1, .36, 1);
