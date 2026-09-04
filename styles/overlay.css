@@ -288,3 +288,10 @@ p,h2,a{
 @keyframes fillError {
   100% { box-shadow: inset 0px 0px 0px 32px #ef444415; }
 }
+
+
+.email-paragraph-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

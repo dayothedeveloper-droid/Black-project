@@ -12,7 +12,7 @@ const newsLetter = async () => {
 
     if (emailInput.value.trim() === "") {
         console.log("PLEASE input your email");
-        errorEmailDisplay.computedStyleMap.color = "red"
+        errorEmailDisplay.style.color = "red"
         errorEmailDisplay.textContent = "Please input your email";
         return
     }

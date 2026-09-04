@@ -1,5 +1,5 @@
 const overlay = document.querySelector(".overlay-popup");
-const closeBtn = document.querySelector(".close-popup-btn");
+const closeBtn = document.querySelector(".close-popup-btn");  ``
 
 export function showPopup () {
       setTimeout(() => {

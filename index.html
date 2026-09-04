@@ -35,12 +35,12 @@
 
 
         <section class="right-section-header">
-        <button class="cart-icon-svg">
+        <a href="cart.html" class="cart-icon-svg">
            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24">
             <path d="M0 0h24v24H0z" fill="none" />
             <path fill="#000" d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 4 0v1h-4Zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z" />
         </svg>
-      </button>
+    </a>
       </section>
 
       <!-- Desktop header -->
@@ -236,8 +236,52 @@
         
     </main>
 
-<footer class="footer container">
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-branding">
+            <img src="Images/BLAKC_7.png" alt="BLACK logo" class="footer-logo">
+            <p>Luxury essentials designed for everyday rituals, from clean tailoring to elevated daily carry.</p>
+        </div>
 
+        <div class="footer-links">
+            <div>
+                <h3>Shop</h3>
+                <ul>
+                    <li><a href="men.html">Men</a></li>
+                    <li><a href="women.html">Women</a></li>
+                    <li><a href="watch.html">Watches</a></li>
+                    <li><a href="wallet.html">Wallets</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="index.html">Journal</a></li>
+                    <li><a href="index.html">Contact</a></li>
+                    <li><a href="index.html">Shipping</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <form class="newsletter-form" action="#" method="post">
+            <label for="newsletter-email">Newsletter</label>
+            <div class="newsletter-input-row">
+                <input id="newsletter-email" type="email" name="email" placeholder="Your email address" required>
+                <button type="submit">Join</button>
+            </div>
+            <small>Private offers, product drops, and curated updates.</small>
+        </form>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 BLACK</p>
+        <div class="footer-socials" aria-label="Social media links">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Pinterest">Pinterest</a>
+            <a href="#" aria-label="X">X</a>
+        </div>
+    </div>
 </footer>
     
          <!-- Popup  container -->
@@ -316,7 +360,7 @@
                 </button>
             </div>
             </div>
-            <div>
+            <div class="email-paragraph-container">
                 <p class="email-error-display"></p>
             </div>
         </form>
