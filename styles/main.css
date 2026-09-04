@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    font-size: 100%;
+    scroll-behavior: smooth;
+    box-sizing: inherit;
+}
+*{
+    outline: 1px solid red
+}
 
 .hero-section{
     margin-top: calc(150 /16 * 1rem);

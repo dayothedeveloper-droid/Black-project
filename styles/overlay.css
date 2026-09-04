@@ -74,7 +74,7 @@ p,h2,a{
     background-color: white;
     color: black;
     font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
-    font-size: 0.80rem;
+    font-size: 1rem;
     outline-color: black;
     outline-width: .5px;
     outline-style: solid;
@@ -84,7 +84,7 @@ p,h2,a{
     font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
     font-size: 1rem;
 }
-@media (width < calc(600 / 16 * 1rem)) {
+@media (width < calc(768 / 16 * 1rem)) {
     .overlay-popup{
         display: none;
     }
