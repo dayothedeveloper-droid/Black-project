@@ -1,3 +1,5 @@
+const popup = document.querySelector(".popup-contents");
+console.log(popup)
 const emailInput = document.getElementById("email");
 const subscribeBtn = document.querySelector(".subscribe-button");
 const overlay = document.querySelector(".overlay-popup");
@@ -7,10 +9,13 @@ const errorOverlay = document.querySelector("#errorModal");
 const closeErrorOverlay = document.getElementById("closeErrorModalBtn");
 const errorEmailDisplay = document.querySelector(".email-error-display");
 console.log(errorEmailDisplay)
+const mobileNewsletter = document.querySelector(".newsletter-form")
+console.log(mobileNewsletter)
+const mobileInputValue = document.getElementById("newsletter-email");
 
-const newsLetter = async () => {
+const newsLetter = async (email) => {
 
-    if (emailInput.value.trim() === "") {
+    if (email.trim() === "") {
         console.log("PLEASE input your email");
         errorEmailDisplay.style.color = "red"
         errorEmailDisplay.textContent = "Please input your email";
@@ -25,7 +30,7 @@ const newsLetter = async () => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                email: emailInput.value
+                email: email.value
             })
         })
 
@@ -44,9 +49,16 @@ const newsLetter = async () => {
     }
 } 
 
-subscribeBtn.addEventListener("click", () => {
-    newsLetter();
-});
+popup.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const emailValue = emailInput.value.trim()
+    newsLetter(emailValue) 
+})
+mobileNewsletter.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const mobileEmailValue = mobileInputValue.value.trim()
+    newsLetter(mobileEmailValue) 
+})
 
 
 closeSuccessBtn.addEventListener("click", () => {
