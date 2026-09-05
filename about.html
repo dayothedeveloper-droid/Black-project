@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <script type="module" src="scripts/aboutpageanimation.js"></script>
     <title>About | BLACK</title>
 </head>
 <body>
@@ -48,13 +49,13 @@
     </header>
 
     <main class="about-page">
-        <section class="about-intro">
+        <section class="about-intro reveal-element">
             <p class="about-eyebrow">About BLACK</p>
             <h1>Quiet confidence, made for every day.</h1>
             <p class="about-lede">BLACK creates refined essentials that make daily dressing feel simple, considered, and personal.</p>
         </section>
 
-        <section class="about-story" aria-labelledby="about-story-title">
+        <section class="about-story reveal-element" aria-labelledby="about-story-title">
             <div class="about-story-heading">
                 <p class="about-eyebrow">Our approach</p>
                 <h2 id="about-story-title">Less noise. Better details.</h2>
@@ -66,17 +67,17 @@
         </section>
 
         <section class="about-values" aria-label="BLACK values">
-            <article>
+            <article class="reveal-element">
                 <span>01</span>
                 <h2>Considered design</h2>
                 <p>Every line and finish has a purpose, with nothing added just for attention.</p>
             </article>
-            <article>
+            <article class="reveal-element">
                 <span>02</span>
                 <h2>Built for rituals</h2>
                 <p>Reliable essentials that support the moments you repeat every day.</p>
             </article>
-            <article>
+            <article class="reveal-element">
                 <span>03</span>
                 <h2>Always evolving</h2>
                 <p>We keep refining our collections as your needs and routines change.</p>
@@ -105,9 +106,17 @@
                     <h3>Company</h3>
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html">Careers</a></li>
-                        <li>+234 80 3075 2395</li>
+                        <li><a href="faq.html">FAQ</a></li>
                         <li><a href="index.html">Shipping</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Contact</h3>
+
+                    <ul>
+                        <li><a href="tel:+234 80 3075 2395">+234 80 3075 2395</a></li>
+                        <li><a href="mailto:thegamerdayo@gmail.com">thegamerdayo@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
@@ -130,5 +139,13 @@
             </div>
         </div>
     </footer>
+
+    <a class="mobile-cart-bubble" href="cart.html" aria-label="View shopping cart">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1m-9-1a2 2 0 0 1 4 0v1h-4Zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2Z" />
+        </svg>
+        <span>0</span>
+    </a>
 </body>
 </html>

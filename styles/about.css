@@ -109,6 +109,22 @@ body {
     font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
     font-size: calc(13 / 16 * 1rem);
 }
+/* Scroll animation */
+
+.reveal-element {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 1s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform, opacity;
+}
+
+
+.reveal-element.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 @media (width <= 768px) {
     .about-page {

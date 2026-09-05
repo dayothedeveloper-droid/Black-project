@@ -1,5 +1,4 @@
 const popup = document.querySelector(".popup-contents");
-console.log(popup)
 const emailInput = document.getElementById("email");
 const subscribeBtn = document.querySelector(".subscribe-button");
 const overlay = document.querySelector(".overlay-popup");
@@ -8,10 +7,10 @@ const closeSuccessBtn = document.querySelector(".close-btn");
 const errorOverlay = document.querySelector("#errorModal");
 const closeErrorOverlay = document.getElementById("closeErrorModalBtn");
 const errorEmailDisplay = document.querySelector(".email-error-display");
-console.log(errorEmailDisplay)
 const mobileNewsletter = document.querySelector(".newsletter-form")
-console.log(mobileNewsletter)
 const mobileInputValue = document.getElementById("newsletter-email");
+
+const successSound = new Audio("Audio/apple_pay_sound.mp3");
 
 const newsLetter = async (email) => {
 
@@ -30,13 +29,17 @@ const newsLetter = async (email) => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                email: email.value
+                email: email
             })
         })
 
         if (!response.ok) {
             throw new Error("Subscription failed")
         }
+
+        successSound.play().catch((error) => {
+            console.error("Error playing sound:", error);
+        });
 
         overlay.classList.add("hidden");
         successOverlay.classList.remove("hidden")

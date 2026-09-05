@@ -505,6 +505,9 @@ html,body{
     gap: calc(18 / 16 * 1rem);
     flex-wrap: wrap;
 }
+.mobile-cart-bubble{
+    display: none;
+}
 
 @media (width <= 768px){
     .footer-inner{
@@ -535,5 +538,39 @@ html,body{
     .footer-bottom{
         flex-direction: column;
         text-align: center;
+    }
+    .mobile-cart-bubble{
+        position: fixed;
+        right: calc(18 / 16 * 1rem);
+        bottom: calc(18 / 16 * 1rem);
+        z-index: 1100;
+        display: flex;
+        width: calc(56 / 16 * 1rem);
+        height: calc(56 / 16 * 1rem);
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: hsl(0, 0%, 8%);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+    }
+    .mobile-cart-bubble svg{
+        width: calc(25 / 16 * 1rem);
+        height: calc(25 / 16 * 1rem);
+        fill: hsl(0, 0%, 100%);
+    }
+    .mobile-cart-bubble span{
+        position: absolute;
+        top: calc(-3 / 16 * 1rem);
+        right: calc(-3 / 16 * 1rem);
+        display: grid;
+        width: calc(20 / 16 * 1rem);
+        height: calc(20 / 16 * 1rem);
+        place-items: center;
+        border-radius: 50%;
+        background: hsl(42, 78%, 42%);
+        color: hsl(0, 0%, 100%);
+        font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+        font-size: calc(11 / 16 * 1rem);
+        font-weight: 700;
     }
 }
